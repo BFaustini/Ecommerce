@@ -1,5 +1,16 @@
 # Ecommerce
 
+Le but de ce projet est la gestion d'un site de e-comerce, avec la gestion des produits et des catégories, la mise en panier et les commandes de produit.
+
+La partie Front end en angular se trouve dans le repertoire front
+Et la partie Back end se trouve dans le repertoire end
+
+
+
+
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.2.
 
 ## Development server
