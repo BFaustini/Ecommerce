@@ -1,0 +1,27 @@
+.view {
+    background-image: url('https://th.bing.com/th/id/OIP.rcan0L3YxjaFtFft6brqyAHaHa?pid=ImgDet&rs=1');
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.mask
+{
+    background-color: rgba(239, 198, 198, 0.846)
+}
+
+
+
+.col-sm-6
+{
+    text-align:center;
+}
+
+
+body
+{
+    background-color: rgba(253, 247, 247, 0.846)
+}

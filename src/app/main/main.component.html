@@ -1,0 +1,302 @@
+<div *ngIf="admi">
+    <div class="view"
+        style="background-image: url('https://d2x38s7blvw0lt.cloudfront.net/uploads/2016/09/hack.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+        <div class="mask" style="background-color: rgba(134, 134, 134, 0.678)">
+
+            <body>
+
+                <div class="row">
+                    <!--"container-fluid"-->
+                    <div class="container-fluid" style="text-align: center;">
+                        <div class="col-sm-3" style="background-color:lavenderblush;">
+
+                            <br>
+                            <br>
+
+                            <a href="${pageContext.request.contextPath}/accueil">
+                                <img src="https://logos-marques.com/wp-content/uploads/2020/04/logo-Chanel.jpg"
+                                    width="200" height="150">
+                            </a>
+
+                        </div>
+                        <div class="col-sm-6" style="background-color:lavenderblush;">
+
+                            <h1>Bonjour, {{uti.nom}}</h1>
+                        </div>
+                        <div class="col-sm-3" style="text-align:center; background-color:lavenderblush;">
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <!--############################################################################################################### -->
+                <div class="row">
+                    <div class="col-sm-6" style="text-align:center  ;border:solid rgba(211, 25, 25, .4);">
+
+                        <br><br><br>
+
+                        <button (click)=categories()>categories</button>
+
+                        <br><br><br>
+
+                    </div>
+
+                    <div class="col-sm-6" style="text-align:center  ;border:solid rgba(211, 25, 25, .4);">
+
+                        <br><br><br>
+                        <button (click)=produit()>produit</button>
+                        <br><br><br>
+                    </div>
+
+                </div>
+                <div class="row">
+
+                    <div class="col-sm-6" style="text-align:center  ;border:solid rgba(211, 25, 25, .4);">
+                        <br><br><br>
+                        <button (click)=commandes()>commande</button>
+                        <br><br><br>
+
+                    </div>
+
+                    <div class="col-sm-6" style="text-align:center  ;border:solid rgba(211, 25, 25, .4);">
+
+                        <br><br><br>
+                        <button (click)=lignecommandes()>ligne commande</button>
+                        <br><br><br>
+                    </div>
+
+                </div>
+                <div class="row">
+
+                    <div class="col-sm-6" style="text-align:center  ;border:solid rgba(211, 25, 25, .4);">
+
+                        <br><br><br>
+                        <button (click)=paniers()>panier</button>
+                        <br><br><br>
+                    </div>
+
+                    <div class="col-sm-6" style="text-align:center  ;border:solid rgba(211, 25, 25, .4);">
+
+                        <br><br><br>
+                        <button (click)=lignepaniers()>ligne panier</button>
+                        <br><br><br>
+                    </div>
+
+                </div>
+                <div class="row">
+
+                    <div class="col-sm-12" style="text-align:center  ;border:solid rgba(211, 25, 25, .4);">
+                        <br><br><br><br>
+                        <br><br><br>
+                        <button (click)=utilisateurs()>utilisateur</button>
+                        <br><br><br>
+                    </div>
+
+                </div>
+
+            </body>
+
+        </div>
+    </div>
+</div>
+<!--############################################################################################################### -->
+<!--############################################################################################################### -->
+<!--############################################################################################################### -->
+<!--############################################################################################################### -->
+
+<div *ngIf="clien">
+
+    <body>
+
+
+        <div class="row">
+            <!--"container-fluid"-->
+            <div class="container-fluid" style="text-align: center;">
+                <div class="col-sm-3" style="background-color:lavenderblush;">
+
+                    <br>
+                    <br>
+
+                    <a href="${pageContext.request.contextPath}/accueil">
+                        <img src="https://logos-marques.com/wp-content/uploads/2020/04/logo-Chanel.jpg" width="200"
+                            height="150">
+                    </a>
+
+                </div>
+                <div class="col-sm-6" style="background-color:lavenderblush;">
+
+                    <h1>Bonjour, {{uti.nom}}</h1>
+                </div>
+                <div class="col-sm-3" style="text-align:center; background-color:lavenderblush;">
+                    <br>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--############################################################################################################### -->
+        <div class="row">
+            <div class=" container-fluid" style="text-align: center;">
+                <div class="col-sm-12" style="text-align:center  ;background-color:lavenderblush;">
+                    <table style="text-align: center;">
+                        <tr>
+                            <td>
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="deroulanta"
+                                        data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">Categorie</button>
+
+                                    <div class="dropdown-menu" aria-labelledby="deroulantb">
+                                        <div *ngFor="let cat of categorie">
+
+                                            <a href="AffCategorie/{{cat.idCategorie}}">
+
+                                                <h3>{{cat.nomCategorie}}</h3>
+                                            </a>
+                                            <br>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td>
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="deroulanta"
+                                        data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">Commande</button>
+
+                                    <div class="dropdown-menu" aria-labelledby="deroulantb">
+
+                                        <div *ngFor="let co of commande">
+                                            <a href="AffCommande?id=${co.idCommande}">Commande:
+                                                {{co.idCommande}}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="deroulanta"
+                                        data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">Panier</button>
+
+                                    <div class="dropdown-menu" aria-labelledby="deroulantb">
+                                        <table class="table table-striped">
+                                            <tr>
+                                                <th>idLignePanier</th>
+                                                <th>Produit:</th>
+                                                <th>nom</th>
+                                                <th>Quantite</th>
+                                                <th>Modifier:</th>
+                                                <th>Supprimer:</th>
+                                            </tr>
+
+                                            <div *ngFor="let l of lignepanier">
+                                                <tr>
+                                                    <th scope="row">{{l.idLignePanier}}</th>
+                                                    <td> <img class="d-block w-30" src="{{l.produit.img}}" width="40"
+                                                            height="25" ></td>
+                                                    <td>{{l.produit.nomProduit}}</td>
+
+                                                        <td>
+                                                            {{l.quantite}}
+                                                            <input type="quantite" name="quantite"
+                                                                value="{{l.quantite}}" [(ngModel)]="quantite"/>
+                                                        </td>
+                                                        <td> <button (click)="modifierligne(l.idLignePanier)">Modifier</button></td>
+                                                    
+
+
+                                                    <td><button (click)="del(l.idLignePanier)">Supprimer</button>
+                                                    </td>
+                                                </tr>
+                                            </div>
+                                        </table>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="view"
+            style="background-image: url('https://th.bing.com/th/id/OIP.rcan0L3YxjaFtFft6brqyAHaHa?pid=ImgDet&rs=1'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+            <div class="mask" style="background-color: rgba(228, 170, 170, 0.678)">
+                <div class="row">
+                    <div class="col-sm-3" style="text-align:center;">
+                    </div>
+
+                    <div class="col-sm-6" style="text-align:center;">
+                        <br>
+                        <br>
+                        <br>
+
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="d-flex justify-content-center">
+                                        <img class="d-block w-30"
+                                            src="https://www.chanel.com/images//t_one////q_auto:good,f_auto,fl_lossy,dpr_1.2/w_1920/classic-handbag-black-lambskin-gold-tone-metal-lambskin-gold-tone-metal-packshot-artistique-vue1-a01112y0129594305-8853718532126.jpg"
+                                            width="450" height="300" alt="First slide">
+                                    </div>
+                                    <div class="carousel-caption d-none d-md-block" style=" top:0;">
+                                        <h5 style="color: black  ;">Sac a main noir</h5>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="d-flex justify-content-center">
+                                        <img class="d-block w-30"
+                                            src="https://i.pinimg.com/originals/d5/29/72/d5297213d40ae5e2ce5bca3e0efbc9e0.jpg"
+                                            width="450" height="300" alt="Second slide">
+                                    </div>
+                                    <div class="carousel-caption d-none d-md-block" style=" top:0;">
+                                        <h5 style="color: black  ;">Sac de voyage noir</h5>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="d-flex justify-content-center">
+                                        <img class="d-block w-30"
+                                            src="https://medias.collectorsquare.com/images/products/359004/00pp-sac-a-main-chanel-timeless-en-python-bleu.jpg"
+                                            width="450" height="300" alt="Third slide">
+                                    </div>
+                                    <div class="carousel-caption d-none d-md-block" style=" top:0;">
+                                        <h5 style="color: black  ;">Sac a main bleu</h5>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                                data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                                data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+
+                        <br><br><br>
+
+
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </body>
+
+</div>
