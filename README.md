@@ -2,11 +2,12 @@
 
 Le but de ce projet est la gestion d'un site de e-comerce, avec la gestion des produits et des catégories, la mise en panier et les commandes de produit.
 
+
 La partie Front end en angular se trouve dans le repertoire front
 Et la partie Back end se trouve dans le repertoire end
 
 
-
+## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## 
 
 
 
